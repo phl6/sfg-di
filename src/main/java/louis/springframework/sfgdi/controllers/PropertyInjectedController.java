@@ -1,9 +1,13 @@
 package louis.springframework.sfgdi.controllers;
 
 import louis.springframework.sfgdi.services.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class PropertyInjectedController {
 
+    @Autowired
     public GreetingService greetingService;
 
     public String getGreeting(){
@@ -13,4 +17,6 @@ public class PropertyInjectedController {
     public String getBye(){
         return greetingService.sayBye();
     }
+
+    public int[] genSortedRandomArrayWithLen(int n){ return greetingService.genSortedRandomArrayWithLen(n); }
 }
