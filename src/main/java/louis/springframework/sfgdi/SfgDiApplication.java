@@ -43,16 +43,16 @@ public class SfgDiApplication {
 
 		System.out.println("------ Setter");
 		SetterInjectedController setterInjectedController = (SetterInjectedController)ctx.getBean("setterInjectedController");
-		System.out.println(propertyInjectedController.getGreeting());
-		int array1[] = propertyInjectedController.genSortedRandomArrayWithLen(5);
+		System.out.println(setterInjectedController.getGreeting());
+		int array1[] = setterInjectedController.genSortedRandomArrayWithLen(5);
 		Arrays.sort(array1);
 		for(int arr : array1) System.out.print(arr + "\t");
 		System.out.println();
 
 		System.out.println("------ Constructor");
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController)ctx.getBean("constructorInjectedController");
-		System.out.println(propertyInjectedController.getGreeting());
-		int array2[] = propertyInjectedController.genSortedRandomArrayWithLen(5);
+		System.out.println(constructorInjectedController.getGreeting());
+		int array2[] = constructorInjectedController.genSortedRandomArrayWithLen(5);
 		Arrays.sort(array2);
 		for(int arr : array2) System.out.print(arr + "\t");
 		System.out.println();

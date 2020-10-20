@@ -5,15 +5,16 @@ import org.springframework.stereotype.Service;
 import java.util.Random;
 
 @Service
-public class GreetingServiceImpl implements GreetingService {
+public class ConstructorGreetingService implements GreetingService {
+
     @Override
     public String sayGreeting() {
-        return "Hello World";
+        return "Hello World - Constructor";
     }
 
     @Override
     public String sayBye() {
-        return "Bye";
+        return "Bye - Constructor";
     }
 
     @Override //take a length param and gen an array with that length
