@@ -1,9 +1,6 @@
 package louis.springframework.sfgdi;
 
-import louis.springframework.sfgdi.controllers.ConstructorInjectedController;
-import louis.springframework.sfgdi.controllers.MyController;
-import louis.springframework.sfgdi.controllers.PropertyInjectedController;
-import louis.springframework.sfgdi.controllers.SetterInjectedController;
+import louis.springframework.sfgdi.controllers.*;
 import org.springframework.aop.scope.ScopedProxyUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -66,6 +63,9 @@ public class SfgDiApplication {
 		for(int arr : array3) System.out.print(arr + "\t");
 		System.out.println();
 
+		I18nController i18nController = (I18nController)ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
+		System.out.println(i18nController.sayBye());
 
 
 
