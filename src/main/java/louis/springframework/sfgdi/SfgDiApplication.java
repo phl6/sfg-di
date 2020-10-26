@@ -57,6 +57,18 @@ public class SfgDiApplication {
 		for(int arr : array2) System.out.print(arr + "\t");
 		System.out.println();
 
+		System.out.println("------ Primary Bean");
+		MyController myController = (MyController)ctx.getBean("myController");
+		System.out.println(myController.sayHello());
+		System.out.println(myController.sayBye());
+		int array3[] = (myController.genSortedRandomArrayWithLen(5));
+		Arrays.sort(array3);
+		for(int arr : array3) System.out.print(arr + "\t");
+		System.out.println();
+
+
+
+
 	}
 
 }
